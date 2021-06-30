@@ -1,4 +1,4 @@
-\documentclass[a5paper,twoside,11pt]{report}
+\documentclass[a5paper, twoside,11pt]{report}
 
 %%%%%%%%%% Packages %%%%%%%%%%
 \include{packages.tex}
@@ -10,7 +10,7 @@
 %%%%%%%%%% Pretitle %%%%%%%%%%
 \include{text/frontmatter/pretitle.tex}
 
-%%%%%%%%%% EMPTY PAGE %%%%%%%%%% 
+%%%%%%%%%% Empty page %%%%%%%%%% 
 \thispagestyle{empty}
   \mbox{}
   \newpage
@@ -29,10 +29,13 @@
 \newpage
 
 %%%%%%%%%% Introduction and Preface %%%%%%%%%%
+\pagenumbering{roman}
 \part*{Preface}
 	\markboth{Preface}{Preface}
-	\addcontentsline{toc}{part}{Apocalypse}
-\include{text/frontmatter/intro.tex}
+	\addcontentsline{toc}{part}{Preface}
+	
+\input{text/frontmatter/intro.tex}
+\include{text/frontmatter/peculiarities.tex}
 
 %%%%%%%%%% About %%%%%%%%%%
 \include{text/frontmatter/about.tex}
@@ -49,7 +52,7 @@
 	\addcontentsline{toc}{part}{Apocalypse}
 \pagenumbering{arabic}
 
-\include{text/chapters/chapter1.tex}
+\input{text/chapters/chapter1.tex}
 
 %%%%%%%%%% Appendix %%%%%%%%%%
 \part*{Appendix}

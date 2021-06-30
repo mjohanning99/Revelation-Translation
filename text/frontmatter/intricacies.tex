@@ -1,0 +1,59 @@
+\documentclass[a5paper,twoside,11pt]{report}
+
+%%%%%%%%%% Packages %%%%%%%%%%
+\include{packages.tex}
+
+\begin{document}
+\pagenumbering{gobble} 
+
+%%%%%%%%%% Pretitle %%%%%%%%%%
+\include{pretitle.tex}
+
+%%%%%%%%%% EMPTY PAGE %%%%%%%%%% 
+\thispagestyle{empty}
+  \mbox{}
+  \newpage
+
+%%%%%%%%%% Posttitle %%%%%%%%%% 
+\include{posttitle.tex}
+
+%%%%%%%%%% Copyright and Impressum %%%%%%%%%%
+\include{copyright.tex}
+
+%%%%%%%%%% Introductory quote %%%%%%%%%%
+\include{quote.tex}
+
+%%%%%%%%%% Table of Contents %%%%%%%%%%
+\tableofcontents
+\newpage
+
+%%%%%%%%%% Introduction and Preface %%%%%%%%%%
+\include{intro.tex}
+
+%%%%%%%%%% About %%%%%%%%%%
+\include{about.tex}
+
+%%%%%%%%%% Empty page %%%%%%%%%%
+\pagenumbering{gobble}
+\thispagestyle{empty}
+  \mbox{}
+  \newpage
+
+%%%%%%%%%% Beginning of text itself %%%%%%%%%%
+\pagenumbering{arabic}
+\chapter*{Who deciphered the Hieroglyphs?}
+  \markboth{Who deciphered the Hieroglyphs?}{Who deciphered the Hieroglyphs?}
+  \addcontentsline{toc}{chapter}{Who deciphered the Hieroglyphs?}
+  Before we commence with the study of the script itself, we will begin by talking about how we are even aware of the meaning of the hieroglyphs. Many people will probably cite Jean-François Champollion as being the first to decipher them; and while this is not wrong per se, it paints a slightly wrong picture, and many people believe that no attempts at deciphering the script had been made before him. In actuality, however, there have been many people that, prior to him, have tried their hands at deciphering this fascinating script — one of which was the Arabic alchemist Ibn Wahshiyya who was born in the 9th century CE.
+
+
+	%%% APPENDIX %%%
+	\part*{Appendix}
+    \markboth{Appendix}{Appendix}
+    \addcontentsline{toc}{part}{Appendix}
+
+		\markboth{Bibliography}{Bibliography}
+		\addcontentsline{toc}{part}{Bibliography}
+		\newpage
+		\printbibliography
+\end{document}
