@@ -3,6 +3,7 @@
 %%%%%%%%%% Packages %%%%%%%%%%
 \include{packages.tex}
 
+%%%%%%%%%% Document begin %%%%%%%%%%
 \begin{document}
 \pagenumbering{gobble} 
 
@@ -28,6 +29,9 @@
 \newpage
 
 %%%%%%%%%% Introduction and Preface %%%%%%%%%%
+\part*{Preface}
+	\markboth{Preface}{Preface}
+	\addcontentsline{toc}{part}{Apocalypse}
 \include{text/frontmatter/intro.tex}
 
 %%%%%%%%%% About %%%%%%%%%%
@@ -40,20 +44,20 @@
   \newpage
 
 %%%%%%%%%% Beginning of text itself %%%%%%%%%%
+\part*{Apocalypse}
+	\markboth{Apocalypse}{Apocalypse}
+	\addcontentsline{toc}{part}{Apocalypse}
 \pagenumbering{arabic}
-\chapter*{Who deciphered the Hieroglyphs?}
-  \markboth{Who deciphered the Hieroglyphs?}{Who deciphered the Hieroglyphs?}
-  \addcontentsline{toc}{chapter}{Who deciphered the Hieroglyphs?}
-  Before we commence with the study of the script itself, we will begin by talking about how we are even aware of the meaning of the hieroglyphs. Many people will probably cite Jean-François Champollion as being the first to decipher them; and while this is not wrong per se, it paints a slightly wrong picture, and many people believe that no attempts at deciphering the script had been made before him. In actuality, however, there have been many people that, prior to him, have tried their hands at deciphering this fascinating script — one of which was the Arabic alchemist Ibn Wahshiyya who was born in the 9th century CE.
 
+\include{text/chapters/chapter1.tex}
 
-	%%% APPENDIX %%%
-	\part*{Appendix}
-    \markboth{Appendix}{Appendix}
-    \addcontentsline{toc}{part}{Appendix}
+%%%%%%%%%% Appendix %%%%%%%%%%
+\part*{Appendix}
+	\markboth{Appendix}{Appendix}
+	\addcontentsline{toc}{part}{Appendix}
+\include{text/backmatter/appendix.tex}
 
-		\markboth{Bibliography}{Bibliography}
-		\addcontentsline{toc}{part}{Bibliography}
-		\newpage
-		\printbibliography
+%%%%%%%%%% Bibliography %%%%%%%%%%
+\include{text/backmatter/bibliography.tex}
+
 \end{document}
