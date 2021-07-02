@@ -1,11 +1,13 @@
-\documentclass[a5paper, twoside,11pt]{report}
+\documentclass[a5paper,twoside,11pt,openany]{book}
 
 %%%%%%%%%% Packages %%%%%%%%%%
 \include{packages.tex}
 
 %%%%%%%%%% Document begin %%%%%%%%%%
 \begin{document}
-\pagenumbering{gobble} 
+\frontmatter
+\pagenumbering{gobble}
+\pagestyle{empty}
 
 %%%%%%%%%% Pretitle %%%%%%%%%%
 \include{text/frontmatter/pretitle.tex}
@@ -23,6 +25,9 @@
 
 %%%%%%%%%% Introductory quote %%%%%%%%%%
 \include{text/frontmatter/quote.tex}
+\thispagestyle{empty}
+  \mbox{}
+  \newpage
 
 %%%%%%%%%% Table of Contents %%%%%%%%%%
 \tableofcontents
@@ -33,26 +38,32 @@
 	\markboth{Preface}{Preface}
 	\addcontentsline{toc}{part}{Preface}
 
+\pagestyle{fancy}
 \pagenumbering{roman}
 \input{text/frontmatter/intro.tex}
+\thispagestyle{empty}
+  \mbox{}
+  \newpage
 \include{text/frontmatter/peculiarities.tex}
 
 %%%%%%%%%% About %%%%%%%%%%
 \include{text/frontmatter/about.tex}
-
-%%%%%%%%%% Empty page %%%%%%%%%%
-\pagenumbering{gobble}
 \thispagestyle{empty}
   \mbox{}
   \newpage
 
 %%%%%%%%%% Beginning of text itself %%%%%%%%%%
+\pagestyle{empty}\mainmatter
 \part*{Apocalypse}
 	\markboth{Apocalypse}{Apocalypse}
 	\addcontentsline{toc}{part}{Apocalypse}
-\pagenumbering{arabic}
 
 \input{text/chapters/chapter1.tex}
+\include{text/chapters/chapter2.tex}
+\include{text/chapters/chapter3.tex}
+\include{text/chapters/chapter4.tex}
+\include{text/chapters/chapter5.tex}
+\include{text/chapters/chapter6.tex}
 
 %%%%%%%%%% Appendix %%%%%%%%%%
 \part*{Appendix}

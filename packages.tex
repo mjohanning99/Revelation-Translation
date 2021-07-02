@@ -1,18 +1,16 @@
-\usepackage[outer=2cm, inner=2cm, bottom=2.5cm]{geometry}
+\usepackage[outer=2cm, inner=2cm, bottom=2.5cm, footnotesep=1cm]{geometry}
 \usepackage[utf8x]{inputenc}
 \usepackage[super]{nth}
 \usepackage[bottom]{footmisc} 
-\usepackage[backend=biber, style=authoryear-icomp, block=ragged]{biblatex}
+%\usepackage[backend=biber, style=authoryear-icomp, block=ragged]{biblatex}
 \usepackage{longtable}
 \usepackage{fancyhdr}
-\usepackage{microtype}
 \usepackage{graphicx}
 \usepackage{wrapfig}
 \usepackage{enumitem}
-\usepackage{amsmath}
 %\usepackage[utf8]{inputenc}
 \usepackage{fontspec}
-\usepackage[greek,english]{babel} 
+\usepackage[greek,english,latin]{babel} 
 \usepackage{epigraph}
 \usepackage{lmodern}
 \usepackage{afterpage}
@@ -26,11 +24,14 @@
 \usepackage{xcolor}
 \usepackage{libertine}
 \linespread{1.1}
+\usepackage[nopbinverse,nocritical,noend,noeledsec,nofamiliar,noledgroup]{reledmac}
+\usepackage[]{reledpar}
+
 \raggedbottom
 
 \makeindex
-
-\addbibresource{bibliography.bib}
+%\setgoalfraction{2}
+%\addbibresource{bibliography.bib}
 
 % \SetWatermarkText{Preview}
 \newlength\longest
