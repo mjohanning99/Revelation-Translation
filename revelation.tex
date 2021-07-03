@@ -1,3 +1,6 @@
+% TODO Where to put illustrations?
+
+
 \documentclass[a5paper,twoside,11pt,openany]{book}
 
 %%%%%%%%%% Packages %%%%%%%%%%
@@ -32,38 +35,38 @@
 %%%%%%%%%% Table of Contents %%%%%%%%%%
 \tableofcontents
 \newpage
-
+\thispagestyle{empty}
+  \mbox{}
+  \newpage
+  
 %%%%%%%%%% Introduction and Preface %%%%%%%%%%
 \part*{Preface}
 	\markboth{Preface}{Preface}
 	\addcontentsline{toc}{part}{Preface}
+\thispagestyle{empty}
+  \mbox{}
+  \newpage
 
 \pagestyle{fancy}
 \pagenumbering{roman}
 \input{text/frontmatter/intro.tex}
-\thispagestyle{empty}
-  \mbox{}
-  \newpage
 \include{text/frontmatter/peculiarities.tex}
 
 %%%%%%%%%% About %%%%%%%%%%
 \include{text/frontmatter/about.tex}
-\thispagestyle{empty}
-  \mbox{}
-  \newpage
 
 %%%%%%%%%% Beginning of text itself %%%%%%%%%%
-\pagestyle{empty}\mainmatter
 \part*{Apocalypse}
 	\markboth{Apocalypse}{Apocalypse}
 	\addcontentsline{toc}{part}{Apocalypse}
-
+  
+\thispagestyle{empty}\mainmatter
 \input{text/chapters/chapter1.tex}
-\include{text/chapters/chapter2.tex}
-\include{text/chapters/chapter3.tex}
-\include{text/chapters/chapter4.tex}
-\include{text/chapters/chapter5.tex}
-\include{text/chapters/chapter6.tex}
+\input{text/chapters/chapter2.tex}
+\input{text/chapters/chapter3.tex}
+\input{text/chapters/chapter4.tex}
+\input{text/chapters/chapter5.tex}
+\input{text/chapters/chapter6.tex}
 
 %%%%%%%%%% Appendix %%%%%%%%%%
 \part*{Appendix}
