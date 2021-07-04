@@ -1,6 +1,3 @@
-% TODO Where to put illustrations?
-
-
 \documentclass[a5paper,twoside,11pt,openany]{book}
 
 %%%%%%%%%% Packages %%%%%%%%%%
@@ -25,6 +22,9 @@
 
 %%%%%%%%%% Copyright and Impressum %%%%%%%%%%
 \include{text/frontmatter/copyright.tex}
+\thispagestyle{empty}
+  \mbox{}
+  \newpage
 
 %%%%%%%%%% Introductory quote %%%%%%%%%%
 \include{text/frontmatter/quote.tex}
@@ -33,6 +33,7 @@
   \newpage
 
 %%%%%%%%%% Table of Contents %%%%%%%%%%
+\thispagestyle{empty}
 \tableofcontents
 \newpage
 \thispagestyle{empty}
@@ -54,19 +55,25 @@
 
 %%%%%%%%%% About %%%%%%%%%%
 \include{text/frontmatter/about.tex}
+\thispagestyle{empty}
+  \mbox{}
+  \newpage
 
 %%%%%%%%%% Beginning of text itself %%%%%%%%%%
+\pagenumbering{gobble}
 \part*{Apocalypse}
 	\markboth{Apocalypse}{Apocalypse}
 	\addcontentsline{toc}{part}{Apocalypse}
   
-\thispagestyle{empty}\mainmatter
+\pagenumbering{gobble}\thispagestyle{empty}\mainmatter
 \input{text/chapters/chapter1.tex}
 \input{text/chapters/chapter2.tex}
 \input{text/chapters/chapter3.tex}
 \input{text/chapters/chapter4.tex}
 \input{text/chapters/chapter5.tex}
 \input{text/chapters/chapter6.tex}
+\input{text/chapters/chapter7.tex}
+\input{text/chapters/chapter8.tex}
 
 %%%%%%%%%% Appendix %%%%%%%%%%
 \part*{Appendix}

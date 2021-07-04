@@ -8,11 +8,10 @@
 \usepackage{graphicx}
 \usepackage{wrapfig}
 \usepackage{enumitem}
-%\usepackage[utf8]{inputenc}
 \usepackage{fontspec}
-\usepackage[greek,english]{babel} 
+\usepackage[german,greek,english]{babel}
+\languageattribute{greek}{ancient} 
 \usepackage{epigraph}
-%\usepackage{lmodern}
 \usepackage{afterpage}
 \usepackage{nonumonpart}
 \usepackage{titlesec}
@@ -29,8 +28,15 @@
 \usepackage[]{reledpar}
 \usepackage[font=small,labelfont=bf]{caption}
 \usepackage{xhfill}
-\colorlet{rulecolor}{Gainsboro!40!Lavender}
-\usepackage{hyperref}
+%\colorlet{rulecolor}{Gainsboro!40!Lavender}
+\definecolor{rulecolor}{rgb}{0.0, 0.25, 0.42}
+\usepackage[hyphens]{url}
+\usepackage{xurl}
+\usepackage{moreenum}
+\usepackage{tocloft}
+
+\setlength{\cftbeforechapskip}{0.5em}
+\setlength{\cftchapnumwidth}{5em}
 
 \raggedbottom
 
@@ -46,7 +52,6 @@
 \titleformat{\chapter}[display]
 {\filcenter}{\mbox{}\xrfill[0.4ex]{3pt}[rulecolor]\textsc{\large\enspace\chaptername \thechapter}\enspace\xrfill[0.4ex]{3pt}[rulecolor]\mbox{}}{0.3ex} {{\color{rulecolor}\titlerule[1pt]}\vskip3ex\huge\bfseries}[\medskip{\color{rulecolor}\titlerule[1pt]}]
 
-
 \titleformat{\section}[wrap]
 {\normalfont\bfseries}
 {\thesection.}{0.5em}{}
@@ -54,24 +59,8 @@
 
 \addto\captionsgreek{\renewcommand{\chaptername}{Κεφάλαιον }}
 \addto\captionsenglish{\renewcommand{\chaptername}{Chapter }}
+\renewcommand{\thechapter}{\Roman{chapter}}
 
-\definecolor{backcolor}{rgb}{0.95,0.95,0.92}
-
-\lstdefinestyle{mystyle}{
-      backgroundcolor=\color{backcolor},
-      basicstyle=\ttfamily\footnotesize,
-      breakatwhitespace=false,         
-      breaklines=true,                 
-      captionpos=b,                    
-      keepspaces=true,                 
-      numbers=left,                    
-      numbersep=5pt,                  
-      showspaces=false,                
-      showstringspaces=false,
-      showtabs=false,                  
-      tabsize=2
-}
-\lstset{style=mystyle}
 %%%%%%%%%% Fancy HDR %%%%%%%%%%
 \pagestyle{fancy}
 \fancyhf{}
