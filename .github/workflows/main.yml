@@ -10,3 +10,5 @@ jobs:
         uses: dante-ev/latex-action@latest
         with:
           root_file: revelation.tex
+          compiler: lualatex
+          args: -interaction=nonstopmode -shell-escape
