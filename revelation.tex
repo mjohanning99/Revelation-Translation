@@ -97,12 +97,13 @@
 
 
 %%%%%%%%%% Appendix %%%%%%%%%%
+\pagenumbering{gobble}
 \part*{Appendix}
 	\markboth{Appendix}{Appendix}
 	\addcontentsline{toc}{part}{Appendix}
-\include{text/backmatter/appendix.tex}
-
-%%%%%%%%%% Bibliography %%%%%%%%%%
-\include{text/backmatter/bibliography.tex}
+\pagenumbering{roman}
+\input{text/backmatter/afterword.tex}
+\include{text/backmatter/greekletters.tex}
+\include{text/backmatter/furtherreading.tex}
 
 \end{document}
