@@ -55,9 +55,6 @@
 
 %%%%%%%%%% Note %%%%%%%%%%
 \include{text/frontmatter/note.tex}
-\thispagestyle{empty}
-  \mbox{}
-  \newpage
 
 %%%%%%%%%% About %%%%%%%%%%
 \include{text/frontmatter/about.tex}
@@ -101,9 +98,13 @@
 \part*{Appendix}
 	\markboth{Appendix}{Appendix}
 	\addcontentsline{toc}{part}{Appendix}
+\thispagestyle{empty}
+  \mbox{}
+  \newpage
+
 \pagenumbering{roman}
+\input{text/backmatter/greekletters.tex}
+\input{text/backmatter/furtherreading.tex}
 \input{text/backmatter/afterword.tex}
-\include{text/backmatter/greekletters.tex}
-\include{text/backmatter/furtherreading.tex}
 
 \end{document}
