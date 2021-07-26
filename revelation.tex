@@ -12,13 +12,9 @@
 %%%%%%%%%% Pretitle %%%%%%%%%%
 \include{text/frontmatter/pretitle.tex}
 
-%%%%%%%%%% Empty page %%%%%%%%%% 
-\thispagestyle{empty}
-  \mbox{}
-  \newpage
-
 %%%%%%%%%% Posttitle %%%%%%%%%% 
 \include{text/frontmatter/posttitle.tex}
+\include{text/frontmatter/posttitlegreek.tex}
 
 %%%%%%%%%% Copyright and Impressum %%%%%%%%%%
 \include{text/frontmatter/copyright.tex}
@@ -41,12 +37,12 @@
   \newpage
   
 %%%%%%%%%% Introduction and Preface %%%%%%%%%%
-\part*{Preface}
-	\markboth{Preface}{Preface}
-	\addcontentsline{toc}{part}{Preface}
 \thispagestyle{empty}
   \mbox{}
   \newpage
+\part*{\textsc{Preface}}
+	\markboth{Preface}{Preface}
+	\addcontentsline{toc}{part}{Preface}
 
 \pagestyle{fancy}
 \pagenumbering{roman}
@@ -64,7 +60,7 @@
 
 %%%%%%%%%% Beginning of text itself %%%%%%%%%%
 \pagenumbering{gobble}
-\part*{Apocalypse}
+\part*{\textsc{Apocalypse}}
 	\markboth{Apocalypse}{Apocalypse}
 	\addcontentsline{toc}{part}{Apocalypse}
   

@@ -25,8 +25,7 @@
 \usepackage[]{reledpar}
 \usepackage[font=small,labelfont=bf]{caption}
 \usepackage{xhfill}
-%\colorlet{rulecolor}{Gainsboro!40!Lavender}
-\definecolor{rulecolor}{rgb}{0.0, 0.25, 0.42}
+\definecolor{rulecolor}{rgb}{0.34, 0.01, 0.1}
 \usepackage[hyphens]{url}
 \usepackage{xurl}
 \usepackage{moreenum}
@@ -39,6 +38,10 @@
 \usepackage{metalogo}
 \usepackage{epigraph}
 \usepackage{Zallman,lettrine}
+\usepackage{datetime}
+
+\newdateformat{monthyeardate}{%
+  \monthname[\THEMONTH], \THEYEAR}
 
 \newfontfamily{\PHtitl}{Philokalia}[
   %Renderer=OpenType,
@@ -46,6 +49,13 @@
   Style=TitlingCaps,
   Scale=0.3,
 ]
+
+\newenvironment{doubletitle}
+{
+\thispagestyle{empty}
+}
+
+\newlength{\drop}
 
 \raggedbottom
 \makeindex
